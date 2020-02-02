@@ -21,8 +21,8 @@ var ingredientFlavorTexts = [
     "placeholder",
     "placeholder",
     "placeholder",
-    "Cheap and safe growth hormones!* \n\
-        *Statement not evaluated by the FDA",
+    "Cheap and safe growth hormones!* \n"+
+        "*Statement not evaluated by the FDA",
     "Lovingly exploded in small batches.",
     "placeholder",
     "We have 'em.",

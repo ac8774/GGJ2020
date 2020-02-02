@@ -10,12 +10,12 @@ class ProductionDialog extends Dialog{
         this.children.push(this.btnDone);
         this.buttons.push(this.btnDone);
         
-        this.ingredientInfoBox=new InfoBox(230,200);
+        this.ingredientInfoBox=new InfoBox(230,190);
         this.children.push(this.ingredientInfoBox);
 
         var b;
         var x = 230;
-        var y = 80;
+        var y = 76;
         
         for(i=0; i<ingredientNames.length; ++i){
             b = new IconButton(ingredientImgNames[i],
