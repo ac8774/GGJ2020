@@ -11,9 +11,9 @@ class ProductionDialog extends Dialog{
         this.buttons.push(this.btnDone);*/
 
         this.ingredientViewers=[];
-        for(i=0;i<4;++i){
+        for(i=0;i<12;++i){
             this.ingredientViewers.push(
-                new IngredientViewer(25,143+i*37,3-i));
+                new IngredientViewer(25,254-i*37,i));
             this.children.push(this.ingredientViewers[i]);
             this.buttons.push(this.ingredientViewers[i]);
         }
@@ -40,7 +40,7 @@ class ProductionDialog extends Dialog{
                 recipe[activeIngredient]+=
                     ingredientBaseQty(activeIngredient);
             } else {
-                if(recipeList().length<4){
+                if(recipeList().length<maxIngredients){
                     recipe[activeIngredient]=
                         ingredientBaseQty(activeIngredient);
                 }else {
@@ -75,7 +75,7 @@ class ProductionDialog extends Dialog{
     }
 
     render(){
-        if(!(activeIngredient in recipe) && recipeList().length==4 ||
+        if(!(activeIngredient in recipe) && recipeList().length==maxIngredients ||
            typeof activeIngredient=="undefined"){
             this.minusButton.setEnabled(false);
             this.plusButton.setEnabled(false);
@@ -96,7 +96,7 @@ class ProductionDialog extends Dialog{
         ctx.translate(this.x,this.y);
 
         drawImage("recipe_bun_bottom",25,291,1);
-        drawImage("recipe_bun_top",25,76+37*(4-recipeList().length),1);
+        drawImage("recipe_bun_top",25,224-37*(recipeList().length),1);
         ctx.textAlign = "left";
         ctx.font = "20px Arial Black";
         ctx.fillStyle = "#555555";

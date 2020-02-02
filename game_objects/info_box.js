@@ -22,7 +22,7 @@ class InfoBox{
             drawImage(this.image,12,12,1.7);
 
             ctx.fillStyle="#333333";
-            
+
             ctx.textAlign="start";
             ctx.font="16px Arial Black";
             ctx.fillText(this.title,
@@ -43,7 +43,7 @@ class InfoBox{
                 ctx.textAlign="right";
                 ctx.font="20px Arial Black";
                 ctx.fillText(recipe[this.title],165,115);
-                
+
                 ctx.textAlign="start";
                 ctx.font="16px Arial";
                 ctx.fillText("units",170,115);
@@ -51,13 +51,13 @@ class InfoBox{
                 ctx.textAlign="center";
                 ctx.font="20px Arial Black";
                 if(!(activeIngredient in recipe) &&
-                   recipeList().length==4 ||
+                   recipeList().length==maxIngredients ||
                    typeof activeIngredient=="undefined")
-                    
+
                     ctx.fillText("RECIPE FULL",162,115);
                 else
                     ctx.fillText("ADD TO RECIPE",162,115);
-                
+
             }
         }
 

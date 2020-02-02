@@ -60,6 +60,7 @@ var sb;  //Status bar
 
 var recipe = {};
 var activeIngredient;
+var maxIngredients = 4;
 
 var money;
 var week;
