@@ -41,7 +41,7 @@ var ingredientImgNames = [
     "ic/placeholder",
     "ic/placeholder",
     "ic/placeholder",
-    "ic/placeholder",
+    "ic/assorted_narcotics",
     "ic/placeholder",
     "ic/placeholder"
 ];
