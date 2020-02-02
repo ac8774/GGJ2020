@@ -20,6 +20,7 @@ class Dialog{
     render(){
         this.y -= Math.sign(this.y - this.targety)*Math.pow(Math.abs(this.y - this.targety), 0.8) * 0.25;
         if(Math.abs(this.y-this.targety)<1) this.y = this.targety;
+        this.y = Math.floor(this.y);
         if(this.y<-550){
             dlg = undefined;
             if(this.callback)
