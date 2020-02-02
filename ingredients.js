@@ -4,7 +4,7 @@ var ingredientNames = [
     "Mixed recycling",
     "Gravel",
     "Glass shards",
-    "Whole cows",
+    "Dog food",
     "Glitter",
     "Growth hormones",
     "Radioactive waste",
@@ -25,7 +25,7 @@ var ingredientFlavorTexts = [
         "\nSHINY!",
     "Cheap and safe growth hormones!* \n"+
         "*Statement not evaluated by the FDA",
-    "Lovingly exploded in small batches.",
+    "Lovingly decayed in small batches.",
     "placeholder",
     "We have 'em.",
     "placeholder"
@@ -34,7 +34,7 @@ var ingredientFlavorTexts = [
 var ingredientImgNames = [
     "ic/generic_garbage",
     "ic/placeholder",
-    "ic/placeholder",
+    "ic/mixed_recycling",
     "ic/placeholder",
     "ic/placeholder",
     "ic/placeholder",
