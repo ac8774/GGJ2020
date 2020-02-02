@@ -40,7 +40,7 @@ var ingredientImgNames = [
     "ic/dog_food",
     "ic/glitter",
     "ic/growth_hormones",
-    "ic/placeholder",
+    "ic/radioactive_waste",
     "ic/assorted_narcotics",
     "ic/placeholder",
     "ic/placeholder"

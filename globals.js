@@ -28,6 +28,7 @@ var imgNames=[
     "ic/dog_food",
     "ic/glitter",
     "ic/growth_hormones",
+    "ic/radioactive_waste",
     "ic/assorted_narcotics",
     "ic/placeholder"
 ];
