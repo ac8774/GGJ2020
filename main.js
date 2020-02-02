@@ -36,10 +36,10 @@ function init(){
 }
 
 function start(){
-    dlg = new ProductionDialog();
+    dlg = new IntroDialog();
     sb  = new StatusBar();
-    camx = 1280;
-    camxgoal = 1280;
+    camx = 0;
+    camxgoal = 0;
     money = 1000000;
     week = 0;
     window.requestAnimationFrame(gameLoop);
