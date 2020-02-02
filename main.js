@@ -1,6 +1,6 @@
 
 function playSound(name) {
-    sounds[name].play()
+    sounds[name].play();
 }
 
 function gameLoop() {
@@ -21,7 +21,7 @@ function init(){
     screenScale = {x:1, y:1};
     initPhysics()
     loadAudio(audioFiles);
-    loadImages(imgNames); // calls start() after loading
+    loadImages(imgNames);
 }
 
 function start(){

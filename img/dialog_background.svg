@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="153.45833mm"
-   height="111.125mm"
-   viewBox="0 0 153.45833 111.125"
+   height="94.191666mm"
+   viewBox="0 0 153.45833 94.191666"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -21,7 +21,7 @@
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
        inkscape:vp_x="41.134095 : 184.17309 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
+       inkscape:vp_y="0 : 999.99996 : 0"
        inkscape:vp_z="251.13409 : 184.17309 : 1"
        inkscape:persp3d-origin="146.1341 : 134.67309 : 1"
        id="perspective858" />
@@ -33,9 +33,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="138.6072"
-     inkscape:cy="87.192316"
+     inkscape:zoom="0.7"
+     inkscape:cx="547.26176"
+     inkscape:cy="-75.378886"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -59,7 +59,7 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:snap-nodes="false" />
+     inkscape:snap-nodes="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -68,7 +68,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -81,14 +81,14 @@
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.48944616;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
        id="rect815"
        width="153.45833"
-       height="111.125"
+       height="94.191666"
        x="29.758389"
        y="22.54952"
        ry="6.3476524"
-       rx="6.3476524" />
+       rx="6.3478832" />
     <path
        style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:24.52704048;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       d="M 542.00977,0 C 555.30085,0 566,10.699151 566,23.990234 v 155.294926 14 194.79659 C 566,398.00921 558.00921,406 548.08175,406 h -250.50948 -14 H 23.990234 C 10.699149,406 0,395.30085 0,382.00977 v 14 C 0,409.30085 10.69915,420 23.990234,420 H 556.00977 C 569.30085,420 580,409.30085 580,396.00977 V 23.990234 C 580,10.69915 569.30085,0 556.00977,0 Z"
+       d="M 542.00977,0 C 555.30085,0 566,10.699151 566,23.990234 v 155.294926 14 130.6519 c 0,9.92746 -7.99079,17.91825 -17.91825,17.91825 h -250.50948 -14 H 23.990234 C 10.699149,341.85531 0,331.15616 0,317.86508 v 14 c 0,13.29108 10.69915,23.99023 23.990234,23.99023 H 556.00977 C 569.30085,355.85531 580,345.15616 580,331.86508 V 23.990234 C 580,10.69915 569.30085,0 556.00977,0 Z"
        transform="matrix(0.26458333,0,0,0.26458333,29.758389,22.54952)"
        id="rect3276"
        inkscape:connector-curvature="0"

@@ -16,28 +16,28 @@ class InfoBox{
         drawImage("info_box_background",0,0,1);
 
         if(typeof this.image != "undefined"){
-            drawImage(this.image,24,24,2);
+            drawImage(this.image,12,12,1.7);
 
             ctx.textAlign="start";
             ctx.fillStyle="#333333";
 
             ctx.font="16px Arial Black";
             ctx.fillText(this.title,
-                         108,
+                         78,
                          25);
 
-            ctx.font="14px Arial";
+            ctx.font="12px Arial";
             var flavors = this.flavorText.split("\n");
             ctx.fillText(flavors[0],
-                         108,
+                         78,
                          45);
             if(flavors[1])
             ctx.fillText(flavors[1],
-                         108,
+                         78,
                          63);
             if(flavors[2])
             ctx.fillText(flavors[2],
-                         108,
+                         78,
                          81);
 
         }
