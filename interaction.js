@@ -53,8 +53,16 @@ function endTurn(){
         gotoPage(5,function(){
             playSound("truck_drive_away");
             setTimeout(function(){
-                dlg = new Dialog("Summary");
+                dlg = new SummaryDialog();
             }, 3000)
+        })
+    })
+}
+
+function startTurn(){
+    dlg.destroy(function(){
+        gotoPage(3,function(){
+            dlg = new ProductionDialog();
         })
     })
 }

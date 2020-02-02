@@ -2,7 +2,7 @@ class IngredientViewer extends Button{
     constructor(x,y,i){
         super(x,y,function(){
             var r = recipeList();
-            if(this.mousex>140){
+            if(this.mousex>139){
                 delete recipe[r[this.i]];
             }else{
                 activeIngredient = r[this.i];
