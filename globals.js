@@ -23,14 +23,14 @@ var camx;
 var camxgoal;
 
 var audioFiles=[
-   "addingTo",
-    "click_Click_DOWN",
-    "click_Click_UP",
-    "Crunch",
-    "factorySound",
+    "plop",
+    "click_down",
+    "click_up",
+    "crunch",
+    "factory",
     "bell",
-    "swipe_Remove",
-    "truckDriveAway"
+    "swipe",
+    "truck_drive_away"
 ];
 var sounds;
 

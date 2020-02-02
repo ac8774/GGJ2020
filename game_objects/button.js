@@ -20,8 +20,10 @@ class Button{
     }
     
     onClickDown(){
-        if(this.mouseover)
+        if(this.mouseover){
             this.clicked=true;
+            sounds["click_down"].play();
+        }
     }
 
     onClickUp(){
