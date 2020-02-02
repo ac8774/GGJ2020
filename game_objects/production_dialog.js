@@ -2,13 +2,13 @@ class ProductionDialog extends Dialog{
     constructor(){
         super("PRODUCTION");
 
-        this.btnDone=new TextButton("DONE",
+    /*    this.btnDone=new TextButton("DONE",
                                     20,
                                     340,
                                     function(){dlg = undefined;});
 
         this.children.push(this.btnDone);
-        this.buttons.push(this.btnDone);
+        this.buttons.push(this.btnDone);*/
 
         this.ingredientViewers=[];
         for(i=0;i<4;++i){
@@ -16,7 +16,7 @@ class ProductionDialog extends Dialog{
                 new IngredientViewer(25,143+i*37));
             this.children.push(this.ingredientViewers[i]);
         }
-        
+
         this.ingredientInfoBox=new InfoBox(230,190);
         this.children.push(this.ingredientInfoBox);
 
@@ -49,15 +49,15 @@ class ProductionDialog extends Dialog{
         this.children.push(b)
         this.buttons.push(b)
     }
-    
+
     render(){
         super.render();
-        
+
         ctx.save();
         ctx.translate(this.x,this.y);
-        
+
         drawImage("recipe_buns",25,76,1);
-        
+
         ctx.restore();
     }
 }
