@@ -37,6 +37,15 @@ function handleKeyEvent(e){
         playSound("swipe");
     }
     */
+    if(e.key=="f")
+    {
+        heading.hidden = !heading.hidden;
+        fullscreen = !fullscreen;
+        if(!fullscreen){
+            gameCanvas.width = 720;
+            gameCanvas.height = 540;
+        }
+    }
 }
 
 function gotoPage(n, callback){

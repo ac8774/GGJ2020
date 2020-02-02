@@ -3,6 +3,9 @@ html, body {
     background-color: blanchedalmond;
     text-align: center;
     overflow: hidden;
+    margin:0;
+    padding:0;
+    height:100%;
 }
 h1 {
     font-family: Arial;
@@ -10,4 +13,7 @@ h1 {
 }
 #gameCanvas {
 	border-radius: 22px;
+}
+#container {
+
 }

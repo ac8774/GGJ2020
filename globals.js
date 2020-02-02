@@ -64,6 +64,7 @@ var activeIngredient;
 var money;
 var week;
 var lastWeekTaste;
+var fullscreen = false;
 
 var burgertimer = 60;
 var camera = {

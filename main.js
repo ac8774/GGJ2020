@@ -4,6 +4,11 @@ function playSound(name) {
 }
 
 function gameLoop() {
+    if(fullscreen){
+        var s = Math.min(document.body.offsetWidth,(document.body.offsetHeight) * 4/3)
+        gameCanvas.width = s;
+        gameCanvas.height = s*3/4;
+    }
     renderAll();
     camx -= Math.sign(camx - camxgoal)*Math.pow(Math.abs(camx - camxgoal), 0.8) * 0.2;
     if(Math.abs(camx - camxgoal)<1){
