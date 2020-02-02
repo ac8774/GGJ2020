@@ -42,10 +42,10 @@ function setupWorld() {
   resetWorld();
 
   b2EdgeShape.prototype.render = function() {
-    ctx.beginPath();
+/*    ctx.beginPath();
     ctx.moveTo(this.vertex1.x, -this.vertex1.y);
     ctx.lineTo(this.vertex2.x, -this.vertex2.y);
-    ctx.stroke();
+    ctx.stroke();*/
   };
 
   b2CircleShape.prototype.render = function() {
@@ -87,7 +87,7 @@ function resetWorld() {
   newEdge(-9, -1, 12, -5);
   newEdge(-9, -1, -8, 3)
   newEdge(-8, 3, -6.5, 4);
-  newEdge(12, 1, 12, 3);
+  newEdge(12, 1, 12, 30);
 
 }
 
@@ -105,10 +105,10 @@ function newBurger() {
   var bd = new b2BodyDef();
   bd.type = b2_dynamicBody;
   bd.position.Set(-11, 2);
-  if(Math.random()>0.97){
+/*  if(Math.random()>0.97){
       circle.radius *= 2;
       bd.position.Set(-12,2);
-  }
+  }*/
   var body = world.CreateBody(bd);
   body.CreateFixtureFromShape(circle, 1);
   body.SetLinearVelocity(new b2Vec2(4+2*Math.random(),11+3*Math.random()))
