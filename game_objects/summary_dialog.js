@@ -101,7 +101,7 @@ class SummaryDialog extends Dialog{
         ctx.font="16px Arial Black";
         ctx.textAlign="right";
         ctx.fillText("Total expenses:",280,130);
-        ctx.fillText("Gross Profit:",280,160);
+        ctx.fillText("Gross Sales:",280,160);
         ctx.fillText("Net Profit:",280,190);
 
         ctx.textAlign = "left";
