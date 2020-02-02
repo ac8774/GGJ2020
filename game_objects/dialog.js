@@ -8,6 +8,7 @@ class Dialog{
         this.y=600;
 
         this.targety=30;
+        this.callback = function(){};
 
         //Initialize pop-up animation
         this.shadow=10;
@@ -19,6 +20,10 @@ class Dialog{
     render(){
         this.y -= Math.sign(this.y - this.targety)*Math.pow(Math.abs(this.y - this.targety), 0.8) * 0.25;
         if(Math.abs(this.y-this.targety)<1) this.y = this.targety;
+        if(this.y<-550){
+            dlg = undefined;
+            this.callback();
+        }
         ctx.save();
         ctx.translate(this.x,this.y);
 
@@ -47,5 +52,10 @@ class Dialog{
             {btn.updateMouse(x-this.x,y-this.y);
             if(type=="mousedown" || type=="touchstart") btn.onClickDown();
             if(type=="mouseup" || type=="touchend") btn.onClickUp();});
+    }
+
+    destroy(callback){
+        this.targety = -600;
+        this.callback = callback;
     }
 }
