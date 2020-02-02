@@ -5,8 +5,8 @@ class ProductionDialog extends Dialog{
         this.btnDone=new TextButton("DONE",
                                     20,
                                     340,
-                                    function(){dlg = undefined;});
-                                    sounds["click_Click_DOWN"].play();
+                                    function(){dlg = undefined; sounds["click_Click_DOWN"].play()});
+        
         this.children.push(this.btnDone);
         this.buttons.push(this.btnDone);
         
