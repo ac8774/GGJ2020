@@ -58,6 +58,7 @@ function gotoPage(n, callback){
 
 function endTurn(){
     playSound("bell");
+    sb.setNextTurnEnabled(false);
     dlg.destroy(function(){
         gotoPage(5,function(){
             playSound("truck_drive_away");
@@ -72,7 +73,8 @@ function startTurn(){
     dlg.destroy(function(){
         gotoPage(3,function(){
             dlg = new ProductionDialog();
-            sb.setEnabled(true);
+            sb.setMoneyEnabled(true);
+            sb.setNextTurnEnabled(true);
         })
     })
 }

@@ -37,7 +37,11 @@ function init(){
 
 function start(){
     dlg = new IntroDialog();
+    
     sb  = new StatusBar();
+    sb.setMoneyEnabled(false);
+    sb.setNextTurnEnabled(false);
+    
     camx = 0;
     camxgoal = 0;
     money = 1000000;

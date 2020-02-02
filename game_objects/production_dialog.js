@@ -119,9 +119,11 @@ class ProductionDialog extends Dialog{
         drawImage("recipe_bun_bottom",25,291,1);
         drawImage("recipe_bun_top",25,224-37*(recipeList().length),1);
         ctx.textAlign = "left";
-        ctx.font = "20px Arial Black";
-        ctx.fillStyle = "#555555";
-        ctx.fillText("$"+totalCost().toLocaleString('en'),37,315);
+        ctx.fillStyle = "#816704";
+        ctx.font = "10px Arial";
+        ctx.fillText("Cost:",38,311);
+        ctx.font = "18px Arial Black";
+        ctx.fillText("$"+totalCost().toLocaleString('en'),65,317);
 
         ctx.restore();
     }

@@ -5,7 +5,6 @@ var screenScale;
 var imgNames=[
     "dialog_background",
     "dialog_title_background",
-    "recipe_buns",
     "recipe_bun_top",
     "recipe_bun_bottom",
     "ingredient_viewer_background",
@@ -19,6 +18,7 @@ var imgNames=[
     "wide_text_button",
     "wide_text_button_pressed",
     "burger",
+    "liquidfun_logo",
 
     //Icons
     "ic/next_turn",

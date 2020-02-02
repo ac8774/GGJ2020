@@ -9,13 +9,15 @@ class StatusBar{
         this.nextTurnButton=new IconButton("ic/next_turn",
                                            584,
                                            8,
-                                           function(){if(totalCost()<=money && totalCost() > 0){money-=totalCost();sb.setEnabled(false); endTurn();}});
-
-        //Enable status bar
-        this.enabled=true;
+                                           function(){if(totalCost()<=money && totalCost() > 0){money-=totalCost(); endTurn();}});
     }
 
     render(){
+        if(totalCost()<=money && totalCost() > 0)
+            this.setNextTurnEnabled(true);
+        else
+            this.setNextTurnEnabled(false);
+        
         ctx.beginPath();
         ctx.fillStyle="black";
         ctx.rect(this.x,this.y,this.w,this.h);
@@ -23,17 +25,20 @@ class StatusBar{
 
         ctx.save();
         ctx.translate(this.x,this.y);
+        
         ctx.textAlign = "left";
         ctx.font = "24px Arial Black";
         ctx.fillStyle = "#FFFFFF";
-        ctx.fillText("$"+money.toLocaleString('en'),25,40)
+        if(this.moneyEnabled)
+            ctx.fillText("$"+money.toLocaleString('en'),25,40);
+        
         ctx.textAlign = "end";
-        if(this.enabled && totalCost()<=money && totalCost() > 0){
+        if(this.nextTurnEnabled){
             ctx.fillText("NEXT TURN",
                          574,
                          40);
         }
-if(totalCost()<=money && totalCost() > 0)
+        
         this.nextTurnButton.render();
 
         ctx.restore();
@@ -47,9 +52,13 @@ if(totalCost()<=money && totalCost() > 0)
         if(type=="mouseup" || type=="touchend")
             this.nextTurnButton.onClickUp();
     }
+    
+    setMoneyEnabled(enabled){
+        this.moneyEnabled=enabled;
+    }
 
-    setEnabled(enabled){
-        this.enabled=enabled;
+    setNextTurnEnabled(enabled){
+        this.nextTurnEnabled=enabled;
         this.nextTurnButton.setEnabled(enabled);
     }
 }
