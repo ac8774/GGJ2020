@@ -18,11 +18,12 @@ function handleMouse(x, y, type){
     }else{
 
     }
-    
+
     sb.mouse(x,y,type);
 }
 
 function handleKeyEvent(e){
+    /*
     if(e.key=="ArrowLeft"){
         //camxgoal = 640*Math.floor(camx/640-.3);
         camxgoal -= 640
@@ -35,4 +36,11 @@ function handleKeyEvent(e){
         if(camxgoal > 640*4) camxgoal = 640*4;
         playSound("swipe");
     }
+    */
+}
+
+function gotoPage(n, callback){
+    camxgoal = (n-1)*640;
+    playSound("swipe");
+    camcallback = callback;
 }
