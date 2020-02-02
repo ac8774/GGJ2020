@@ -23,6 +23,8 @@ var imgNames=[
     "ic/generic_garbage",
     "ic/compost",
     "ic/mixed_recycling",
+    "ic/gravel",
+    "ic/glass_shards",
     "ic/placeholder"
 ];
 var sprites;
