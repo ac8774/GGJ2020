@@ -16,20 +16,20 @@ class InfoBox{
         drawImage("info_box_background",0,0,1);
         
         if(typeof this.image != "undefined"){
-            drawImage(this.image,16,16,2);
+            drawImage(this.image,24,24,2);
             
             ctx.textAlign="start";
-            ctx.fillStyle="#000000";
+            ctx.fillStyle="#333333";
             
             ctx.font="16px Arial Black";
             ctx.fillText(this.title,
-                         100,
-                         30);
+                         108,
+                         38);
             
             ctx.font="14px Arial";
             ctx.fillText(this.flavorText,
-                         100,
-                         50);
+                         108,
+                         58);
         }
         
         /*drawImage("dialog_title_background",

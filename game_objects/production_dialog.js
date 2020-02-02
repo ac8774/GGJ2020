@@ -2,13 +2,13 @@ class ProductionDialog extends Dialog{
     constructor(){
         super("PRODUCTION");
 
-        /*this.btnDone=new TextButton("DONE",
+        this.btnDone=new TextButton("DONE",
                                     20,
                                     340,
                                     function(){dlg = undefined;});
                                     sounds["click_Click_DOWN"].play();
         this.children.push(this.btnDone);
-        this.buttons.push(this.btnDone);*/
+        this.buttons.push(this.btnDone);
         
         this.ingredientInfoBox=new InfoBox(230,200);
         this.children.push(this.ingredientInfoBox);
@@ -18,12 +18,17 @@ class ProductionDialog extends Dialog{
         var y = 80;
         
         for(i=0; i<ingredientNames.length; ++i){
-            b = new IconButton(ingredientImgNames[i],x,y,function(ingredientInfoBox){
-                ingredientInfoBox.updateInfo(ingredientImgNames[0],
-                                             ingredientNames[0],
-                                             ingredientFlavorTexts[0]);
+            b = new IconButton(ingredientImgNames[i],
+                               x,
+                               y,
+                               function(ingredientInfoBox,index){
                 
-            }.bind(this,this.ingredientInfoBox));
+                ingredientInfoBox.updateInfo(
+                    ingredientImgNames[index],
+                    ingredientNames[index],
+                    ingredientFlavorTexts[index]);
+                
+            }.bind(this,this.ingredientInfoBox,i));
             
             x += 55;
             if(x==560){x = 230; y += 55;}
