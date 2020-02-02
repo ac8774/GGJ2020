@@ -42,5 +42,19 @@ function handleKeyEvent(e){
 function gotoPage(n, callback){
     camxgoal = (n-1)*640;
     playSound("swipe");
+    if(callback)
     camcallback = callback;
+}
+
+
+function endTurn(){
+    playSound("bell");
+    dlg.destroy(function(){
+        gotoPage(5,function(){
+            playSound("truck_drive_away");
+            setTimeout(function(){
+                dlg = new Dialog("Summary");
+            }, 3000)
+        })
+    })
 }
