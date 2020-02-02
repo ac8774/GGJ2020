@@ -17,8 +17,8 @@ var ingredientFlavorTexts = [
     "Garden variety garbage.",
     "placeholder",
     "placeholder",
-    "Comparable nutritional value to your\n"+
-        "kid's school lunch.",
+    "Comparable nutritional value to the\n"+
+        "average school lunch.",
     "placeholder",
     "placeholder",
     "Delicious, nutritrous, and best of all..."+
@@ -26,7 +26,7 @@ var ingredientFlavorTexts = [
     "Cheap and safe growth hormones!* \n"+
         "*Statement not evaluated by the FDA",
     "Lovingly decayed in small batches.",
-    "placeholder",
+    "Extracted from your local water supply.",
     "We have 'em.",
     "placeholder"
 ];
@@ -37,7 +37,7 @@ var ingredientImgNames = [
     "ic/mixed_recycling",
     "ic/gravel",
     "ic/glass_shards",
-    "ic/placeholder",
+    "ic/dog_food",
     "ic/placeholder",
     "ic/placeholder",
     "ic/placeholder",

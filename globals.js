@@ -25,6 +25,7 @@ var imgNames=[
     "ic/mixed_recycling",
     "ic/gravel",
     "ic/glass_shards",
+    "ic/dog_food",
     "ic/assorted_narcotics",
     "ic/placeholder"
 ];
