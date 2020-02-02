@@ -10,19 +10,19 @@ class TextButton extends Button{
         this.h = sprites["text_button"].height;
         
         //Button image
-        this.img="text_button";
+        this.background="text_button";
     }
 
     render(){
         if(this.mouseover && this.clicked){
-            this.img="text_button_pressed";
+            this.background="text_button_pressed";
             this.textOffset=4;
         }else{
-            this.img="text_button";
+            this.background="text_button";
             this.textOffset=0;
         }
         
-        drawImage(this.img,this.x,this.y,1);
+        drawImage(this.background,this.x,this.y,1);
         ctx.textAlign = "center";
         ctx.font = "26px Arial Black";
         ctx.fillStyle = "#999999";

@@ -11,20 +11,20 @@ class IconButton extends Button{
         this.h = sprites["icon_button"].height;
         
         //Button image
-        this.img="icon_button";
+        this.background="icon_button";
     }
 
     render(){
         if(this.mouseover && this.clicked){
-            this.img="icon_button_pressed";
+            this.background="icon_button_pressed";
             this.iconOffset=4;
         }else{
-            this.img="icon_button";
+            this.background="icon_button";
             this.iconOffset=0;
         }
         
-        drawImage(this.img,this.x,this.y,1);
-        drawImage("ic/generic_garbage",
+        drawImage(this.background,this.x,this.y,1);
+        drawImage(this.icon,
                   this.x+this.iconOffset+6,
                   this.y+this.iconOffset+6,
                   1);

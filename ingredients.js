@@ -12,8 +12,8 @@ var ingredientNames = [
     "tbd",
     '"Secret Sauce"'
 ];
-var ingredientImgNames = [
-    "generic_garbage",
+var ingredientFlavorTexts = [
+    "Garden variety garbage.",
     "placeholder",
     "placeholder",
     "placeholder",
@@ -25,6 +25,20 @@ var ingredientImgNames = [
     "placeholder",
     "placeholder",
     "placeholder"
+];
+var ingredientImgNames = [
+    "ic/generic_garbage",
+    "ic/placeholder",
+    "ic/placeholder",
+    "ic/placeholder",
+    "ic/placeholder",
+    "ic/placeholder",
+    "ic/placeholder",
+    "ic/placeholder",
+    "ic/placeholder",
+    "ic/placeholder",
+    "ic/placeholder",
+    "ic/placeholder"
 ];
 var ingredientCosts = [
     1,

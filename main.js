@@ -4,6 +4,7 @@ var screenScale;
 var imgNames=[
     "dialog_background",
     "dialog_title_background",
+    "info_box_background",
     "factory_background",
     "icon_button",
     "icon_button_pressed",
@@ -12,7 +13,8 @@ var imgNames=[
     "burger",
 
     //Icons
-    "ic/generic_garbage"
+    "ic/generic_garbage",
+    "ic/placeholder"
 ];
 var sprites;
 var camx;

@@ -10,6 +10,7 @@ class Dialog{
         //Initialize pop-up animation
         this.shadow=10;
 
+        this.children=[];
         this.buttons=[];
     }
 
@@ -31,7 +32,7 @@ class Dialog{
                      sprites["dialog_background"].width/2,
                      46);
         
-        this.buttons.forEach(btn => btn.render());
+        this.children.forEach(btn => btn.render());
         
         ctx.restore();
     }
