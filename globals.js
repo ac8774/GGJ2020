@@ -26,8 +26,10 @@ var imgNames=[
     "ic/placeholder"
 ];
 var sprites;
+
 var camx;
 var camxgoal;
+var camcallback = function(){};
 
 var audioFiles=[
     "plop",

@@ -5,7 +5,13 @@ function playSound(name) {
 
 function gameLoop() {
     renderAll();
-    camx = (camx*0.9+camxgoal*0.1);
+    camx -= Math.sign(camx - camxgoal)*Math.pow(Math.abs(camx - camxgoal), 0.8) * 0.2;
+    if(Math.abs(camx - camxgoal)<1){
+        camx = camxgoal;
+        camcallback();
+        camcallback = function(){};
+    }
+
     window.requestAnimationFrame(gameLoop);
 }
 

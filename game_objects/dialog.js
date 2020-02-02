@@ -1,7 +1,7 @@
 class Dialog{
     constructor(title){
         //Dialog title
-        this.title=title; // TODO use this!
+        this.title=title;
 
         //Coordinates of top-left corner
         this.x=30;
