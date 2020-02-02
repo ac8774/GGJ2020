@@ -26,6 +26,8 @@ var imgNames=[
     "ic/gravel",
     "ic/glass_shards",
     "ic/dog_food",
+    "ic/glitter",
+    "ic/growth_hormones",
     "ic/assorted_narcotics",
     "ic/placeholder"
 ];
