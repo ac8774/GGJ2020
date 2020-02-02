@@ -6,7 +6,7 @@ var ingredientNames = [
     "Glass Shards",
     "Whole Cows",
     "Glitter",
-    "Animal Growth Hormone",
+    "Growth Hormones",
     "Gravel",
     "Assorted Drugs",
     "tbd",
