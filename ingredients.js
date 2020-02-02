@@ -139,3 +139,20 @@ function tastinessOf(name, amount){
     peak = ingredientPeakQty(name);
     return ingredientPeakTaste(name) * (1 - Math.abs(peak - amount) / peak)
 }
+
+function totalCost(){
+    var s = 0
+    ingredientNames.forEach(n => {
+        if(n in recipe)
+            s += costOf(n,recipe[n])
+    })
+    return s;
+}
+function totalTaste(){
+    var s = 0
+    ingredientNames.forEach(n => {
+        if(n in recipe)
+            s += tastinessOf(n,recipe[n])
+    })
+    return s;
+}
