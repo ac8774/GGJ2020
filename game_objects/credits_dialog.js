@@ -1,14 +1,10 @@
-class IntroDialog extends Dialog{
+class CreditsDialog extends Dialog{
     constructor(){
         super("BUDGET BURGERS");
 
         this.btnDone=new TextButton("START",425,280,function(){startTurn();});
         this.children.push(this.btnDone);
         this.buttons.push(this.btnDone);
-
-        this.creditsBtn=new TextButton("CREDITS",250,280,function(){credits();});
-        this.children.push(this.creditsBtn);
-        this.buttons.push(this.creditsBtn);
 
         this.message = [
             "first line",
@@ -30,11 +26,6 @@ class IntroDialog extends Dialog{
             ctx.fillText(m,290,y)
             y += 30;
         });
-        ctx.textAlign = "left";
-        ctx.font="14px Arial";
-        ctx.fillStyle="#aaaaaa";
-        ctx.fillText("press f for fullscreen", 30, 320)
-
 
         ctx.restore();
     }

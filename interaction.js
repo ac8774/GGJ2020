@@ -76,3 +76,9 @@ function startTurn(){
         })
     })
 }
+
+function credits(){
+    dlg.destroy(function(){
+        dlg = new CreditsDialog();
+    })
+}
