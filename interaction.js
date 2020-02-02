@@ -18,6 +18,8 @@ function handleMouse(x, y, type){
     }else{
 
     }
+    
+    sb.mouse(x,y,type);
 }
 
 function handleKeyEvent(e){
