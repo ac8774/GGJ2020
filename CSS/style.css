@@ -1,0 +1,13 @@
+
+html, body {
+    background-color: light-grey;
+    text-align: center;
+    overflow: hidden;
+}
+h1 {
+    font-family: Arial;
+    font-size: 40px;
+}
+#gameCanvas {
+	border-radius: 25px;
+}
