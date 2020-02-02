@@ -1,4 +1,8 @@
 
+function playSound(name) {
+    sounds[name].play()
+}
+
 function gameLoop() {
     renderAll();
     camx = (camx*0.9+camxgoal*0.1);
