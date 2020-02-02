@@ -16,24 +16,18 @@ class InfoBox{
         ctx.translate(this.x, this.y);
         drawImage("info_box_background",0,0,1);
         this.image=ingredientImgName(activeIngredient);
-        if(typeof this.image != "undefined"){
+        if(typeof this.image!="undefined"){
             this.title=activeIngredient;
             this.flavorText=ingredientFlavorText(activeIngredient);
             drawImage(this.image,12,12,1.7);
 
-            ctx.textAlign="start";
             ctx.fillStyle="#333333";
-
+            
+            ctx.textAlign="start";
             ctx.font="16px Arial Black";
             ctx.fillText(this.title,
                          78,
                          25);
-            //
-            if(this.title in recipe){
-                ctx.fillText(recipe[this.title]+" units",125,115)
-            }else{
-                ctx.fillText("None in recipe",125,115)
-            }
 
             ctx.font="12px Arial";
             var flavors = this.flavorText.split("\n");
@@ -45,7 +39,26 @@ class InfoBox{
                          78,
                          63);
 
-
+            if(this.title in recipe){
+                ctx.textAlign="right";
+                ctx.font="20px Arial Black";
+                ctx.fillText(recipe[this.title],165,115);
+                
+                ctx.textAlign="start";
+                ctx.font="16px Arial";
+                ctx.fillText("units",170,115);
+            }else{
+                ctx.textAlign="center";
+                ctx.font="20px Arial Black";
+                if(!(activeIngredient in recipe) &&
+                   recipeList().length==4 ||
+                   typeof activeIngredient=="undefined")
+                    
+                    ctx.fillText("RECIPE FULL",162,115);
+                else
+                    ctx.fillText("ADD TO RECIPE",162,115);
+                
+            }
         }
 
         /*drawImage("dialog_title_background",

@@ -17,14 +17,22 @@ class IngredientViewer extends Button{
     render(){
         var r = recipeList();
         if(r.length>this.i){
+            this.enabled=true;
+            
             drawImage("ingredient_viewer_background",this.x,this.y,1);
-            drawImage(ingredientImgName(r[this.i]),this.x+10,this.y+4,0.75)
-            ctx.textAlign="start";
+            drawImage(ingredientImgName(r[this.i]),this.x+10,this.y+4,0.75);
+            
+            ctx.textAlign="end";
             ctx.fillStyle="#333333";
             ctx.font="16px Arial Black";
-            ctx.fillText(recipe[r[this.i]],this.x+40,this.y+22);
-
-        }
+            ctx.fillText(recipe[r[this.i]],this.x+90,this.y+22);
+            
+            ctx.textAlign="start";
+            ctx.fillStyle="#333333";
+            ctx.font="12px Arial";
+            ctx.fillText("units",this.x+95,this.y+22);
+        }else
+            this.enabled=false;
     }
 
     updateMouse(x,y){

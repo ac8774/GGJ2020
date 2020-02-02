@@ -10,6 +10,9 @@ class StatusBar{
                                            584,
                                            8,
                                            function(){sb.setEnabled(false); endTurn();});
+        
+        //Enable status bar
+        this.enabled=true;
     }
 
     render(){
@@ -21,12 +24,15 @@ class StatusBar{
         ctx.save();
         ctx.translate(this.x,this.y);
 
-        ctx.textAlign = "end";
-        ctx.font = "24px Arial Black";
-        ctx.fillStyle = "#333333";
-        ctx.fillText("NEXT TURN",
-                     576,
-                     40);
+        if(this.enabled){
+            ctx.textAlign = "end";
+            ctx.font = "24px Arial Black";
+            ctx.fillStyle = "#FFFFFF";
+            ctx.fillText("NEXT TURN",
+                         574,
+                         40);
+        }
+        
         this.nextTurnButton.render();
 
         ctx.restore();
@@ -42,6 +48,7 @@ class StatusBar{
     }
     
     setEnabled(enabled){
+        this.enabled=enabled;
         this.nextTurnButton.setEnabled(enabled);
     }
 }

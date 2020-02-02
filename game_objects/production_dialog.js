@@ -20,6 +20,36 @@ class ProductionDialog extends Dialog{
 
         this.ingredientInfoBox=new InfoBox(230,190);
         this.children.push(this.ingredientInfoBox);
+        
+        this.minusButton = new IconButton('ic/minus',240,275,function(){
+            if(activeIngredient in recipe){
+                recipe[activeIngredient]-=
+                    ingredientBaseQty(activeIngredient);
+                
+                if(recipe[activeIngredient]==0)
+                    delete recipe[activeIngredient];
+            } else {
+                // BAD sound
+            }
+        });
+        this.children.push(this.minusButton);
+        this.buttons.push(this.minusButton);
+        
+        this.plusButton = new IconButton('ic/plus',495,275,function(){
+            if(activeIngredient in recipe){
+                recipe[activeIngredient]+=
+                    ingredientBaseQty(activeIngredient);
+            } else {
+                if(recipeList().length<4){
+                    recipe[activeIngredient]=
+                        ingredientBaseQty(activeIngredient);
+                }else {
+                    // BAD sound
+                }
+            }
+        });
+        this.children.push(this.plusButton);
+        this.buttons.push(this.plusButton);
 
         var b;
         var x = 230;
@@ -35,7 +65,6 @@ class ProductionDialog extends Dialog{
                     ingredientImgNames[index],
                     ingredientNames[index],
                     ingredientFlavorTexts[index]);
-
             }.bind(this,this.ingredientInfoBox,i));
 
             x += 55;
@@ -43,15 +72,24 @@ class ProductionDialog extends Dialog{
             this.children.push(b);
             this.buttons.push(b);
         }
-        b = new IconButton('ic/minus',240,275,minusfunc)
-        this.children.push(b)
-        this.buttons.push(b)
-        b = new IconButton('ic/plus',290,275,plusfunc)
-        this.children.push(b)
-        this.buttons.push(b)
     }
 
     render(){
+        if(!(activeIngredient in recipe) && recipeList().length==4 ||
+           typeof activeIngredient=="undefined"){
+            this.minusButton.setEnabled(false);
+            this.plusButton.setEnabled(false);
+        }else if(!(activeIngredient in recipe)){
+            this.minusButton.setEnabled(false);
+            this.plusButton.setEnabled(true);
+        }else if(recipe[activeIngredient]==2000){
+            this.minusButton.setEnabled(true);
+            this.plusButton.setEnabled(false);
+        }else{
+            this.minusButton.setEnabled(true);
+            this.plusButton.setEnabled(true);
+        }
+        
         super.render();
 
         ctx.save();
@@ -61,26 +99,5 @@ class ProductionDialog extends Dialog{
         drawImage("recipe_bun_top",25,76+37*(4-recipeList().length),1);
 
         ctx.restore();
-    }
-}
-
-plusfunc = function(){
-    if(activeIngredient in recipe){
-        recipe[activeIngredient] += ingredientBaseQty(activeIngredient);
-    } else {
-        if(recipeList().length<4){
-            recipe[activeIngredient] = ingredientBaseQty(activeIngredient);
-        }else {
-            // BAD sound
-        }
-    }
-}
-minusfunc = function(){
-    if(activeIngredient in recipe){
-        recipe[activeIngredient] -= ingredientBaseQty(activeIngredient);
-        if(recipe[activeIngredient]==0)
-            delete recipe[activeIngredient];
-    } else {
-        // BAD sound
     }
 }

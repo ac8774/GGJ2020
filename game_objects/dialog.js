@@ -10,7 +10,7 @@ class Dialog{
         this.targety=30;
         this.callback = function(){};
 
-        //Initialize pop-up animation
+        //Initialize shadow
         this.shadow=10;
 
         this.children=[];
@@ -24,7 +24,7 @@ class Dialog{
         if(this.y<-550){
             dlg = undefined;
             if(this.callback)
-            this.callback();
+                this.callback();
         }
         ctx.save();
         ctx.translate(this.x,this.y);

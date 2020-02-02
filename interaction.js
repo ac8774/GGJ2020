@@ -63,6 +63,7 @@ function startTurn(){
     dlg.destroy(function(){
         gotoPage(3,function(){
             dlg = new ProductionDialog();
+            sb.setEnabled(true);
         })
     })
 }

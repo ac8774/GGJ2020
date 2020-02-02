@@ -33,8 +33,8 @@ function init(){
 function start(){
     dlg = new ProductionDialog();
     sb  = new StatusBar();
-    camx = 0;
-    camxgoal = 0;
+    camx = 1280;
+    camxgoal = 1280;
     window.requestAnimationFrame(gameLoop);
 }
 
