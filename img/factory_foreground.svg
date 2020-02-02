@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9899495"
-     inkscape:cx="1114.5042"
-     inkscape:cy="127.06556"
+     inkscape:cx="1851.5258"
+     inkscape:cy="122.99893"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -44,7 +44,14 @@
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:snap-bbox-midpoints="true" />
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:snap-page="true" />
   <metadata
      id="metadata895">
     <rdf:RDF>
@@ -103,16 +110,9 @@
     </g>
     <path
        style="opacity:1;fill:#d9d9d9;fill-opacity:1;stroke:none;stroke-width:16.25661659;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       d="m 1246.9297,48.9375 20.1055,69.48438 -54.5546,102.01671 -215.3224,0 V 480 h 945.9883 l 4.2857,-127.17355 -551,-103.70898 12.7006,-79.72685 59.6856,-40.86328 z"
+       d="M 1813.1328 0 L 1813.1328 219.74023 L 1874.748 230.47266 L 1874.748 339.07422 L 1396.4316 249.11719 L 1409.1328 169.39062 L 1449.2246 144.00781 L 1296.7344 88.035156 L 1311.043 136.32227 L 1257.918 226.91016 L 997.1582 225.43945 L 997.1582 480 L 1874.748 480 L 1874.75 480 L 2172.2051 480 L 2172.2051 282.28125 L 2172.2051 141.14062 L 2172.2051 0 L 1813.1328 0 z "
        transform="matrix(0.26458333,0,0,0.26458333,0.75594985,-31.839298)"
-       id="rect826"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccc" />
-    <path
-       style="opacity:1;fill:#d9d9d9;fill-opacity:1;stroke:none;stroke-width:20.35541344;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       d="M 1881.8242 0 L 1881.8242 219.74023 L 2172.2051 219.74023 L 2172.2051 0 L 1881.8242 0 z "
-       transform="matrix(0.26458333,0,0,0.26458333,0.75594985,-31.839298)"
-       id="rect832-4" />
+       id="rect826" />
     <rect
        style="opacity:0;fill:#d9d9d9;fill-opacity:1;stroke:none;stroke-width:6.06500006;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
        id="rect834"
