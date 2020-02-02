@@ -1,7 +1,8 @@
 class TextButton extends Button{
     constructor(text,x,y,callback){
         super(x,y,callback);
-        //Dialog title
+        
+        //Button text
         this.text=text;
         this.textOffset=0;
 

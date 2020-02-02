@@ -16,7 +16,8 @@ class Dialog{
 
     render(){
         ctx.save();
-        ctx.translate(this.x, this.y);
+        ctx.translate(this.x,this.y);
+        
         drawImageShadow("dialog_background",0,0,this.shadow);
         
         drawImage("dialog_title_background",

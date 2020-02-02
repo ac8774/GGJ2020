@@ -15,6 +15,7 @@ var imgNames=[
     "burger",
 
     //Icons
+    "ic/next_turn",
     "ic/generic_garbage",
     "ic/placeholder"
 ];
