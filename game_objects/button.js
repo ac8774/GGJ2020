@@ -7,6 +7,9 @@ class Button{
         
         this.mouseover=false;
         this.clicked=false;
+        
+        //Enable button
+        this.enabled=true;
     }
     
     updateMouse(x,y){
@@ -21,19 +24,23 @@ class Button{
     }
     
     onClickDown(){
-        if(this.mouseover){
+        if(this.enabled && this.mouseover){
            playSound("click_down");
             this.clicked=true;
         }
     }
 
     onClickUp(){
-        if(this.mouseover){
+        if(this.enabled && this.mouseover){
             if(this.clicked)
                 this.callback();
             
             playSound("click_up");
             this.clicked=false;
         }
+    }
+    
+    setEnabled(enabled){
+        this.enabled=enabled;
     }
 }

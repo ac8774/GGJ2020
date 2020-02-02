@@ -43,10 +43,10 @@ class ProductionDialog extends Dialog{
             this.children.push(b);
             this.buttons.push(b);
         }
-        b = new IconButton('ic/placeholder',240,275,minusfunc)
+        b = new IconButton('ic/minus',240,275,minusfunc)
         this.children.push(b)
         this.buttons.push(b)
-        b = new IconButton('ic/placeholder',290,275,plusfunc)
+        b = new IconButton('ic/plus',290,275,plusfunc)
         this.children.push(b)
         this.buttons.push(b)
     }

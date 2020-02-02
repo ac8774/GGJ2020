@@ -9,7 +9,7 @@ class StatusBar{
         this.nextTurnButton=new IconButton("ic/next_turn",
                                            584,
                                            8,
-                                           function(){endTurn();});
+                                           function(){sb.setEnabled(false); endTurn();});
     }
 
     render(){
@@ -23,7 +23,7 @@ class StatusBar{
 
         ctx.textAlign = "end";
         ctx.font = "24px Arial Black";
-        ctx.fillStyle = "#222222";
+        ctx.fillStyle = "#333333";
         ctx.fillText("NEXT TURN",
                      576,
                      40);
@@ -39,5 +39,9 @@ class StatusBar{
             this.nextTurnButton.onClickDown();
         if(type=="mouseup" || type=="touchend")
             this.nextTurnButton.onClickUp();
+    }
+    
+    setEnabled(enabled){
+        this.nextTurnButton.setEnabled(enabled);
     }
 }

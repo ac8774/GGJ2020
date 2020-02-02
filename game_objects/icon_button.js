@@ -15,18 +15,20 @@ class IconButton extends Button{
     }
 
     render(){
-        if(this.mouseover && this.clicked){
-            this.background="icon_button_pressed";
-            this.iconOffset=4;
-        }else{
-            this.background="icon_button";
-            this.iconOffset=0;
+        if(this.enabled){
+            if(this.mouseover && this.clicked){
+                this.background="icon_button_pressed";
+                this.iconOffset=4;
+            }else{
+                this.background="icon_button";
+                this.iconOffset=0;
+            }
+             
+            drawImage(this.background,this.x,this.y,1);
+            drawImage(this.icon,
+                      this.x+this.iconOffset+6,
+                      this.y+this.iconOffset+6,
+                      1);
         }
-        
-        drawImage(this.background,this.x,this.y,1);
-        drawImage(this.icon,
-                  this.x+this.iconOffset+6,
-                  this.y+this.iconOffset+6,
-                  1);
     }
 }

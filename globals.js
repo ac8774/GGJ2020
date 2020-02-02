@@ -32,6 +32,8 @@ var imgNames=[
     "ic/assorted_narcotics",
     "ic/the_meats",
     "ic/secret_sauce",
+    "ic/plus",
+    "ic/minus",
     "ic/placeholder"
 ];
 var sprites;
@@ -68,5 +70,6 @@ var camera = {
 var world = null;
 var g_groundBody;
 
-
-init();
+document.addEventListener('DOMContentLoaded', function() {
+   init();
+},false);

@@ -5,7 +5,7 @@ class SummaryDialog extends Dialog{
         this.btnDone=new TextButton("DONE",
                                     425,
                                     280,
-                                    function(){startTurn();});
+                                    function(){sb.setEnabled(true); startTurn();});
 
         this.children.push(this.btnDone);
         this.buttons.push(this.btnDone);
