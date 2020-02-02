@@ -1,8 +1,17 @@
-class IngredientViewer{
+class IngredientViewer extends Button{
     constructor(x,y,i){
-        this.x=x;
-        this.y=y;
+        super(x,y,function(){
+            var r = recipeList();
+            if(this.mousex>130){
+                delete recipe[r[this.i]];
+            }else{
+                activeIngredient = r[this.i];
+            }
+        })
+        this.w=180;
+        this.h=32;
         this.i = i;
+        this.mousex = 0;
     }
 
     render(){
@@ -18,14 +27,18 @@ class IngredientViewer{
         }
     }
 
-    mouse(x,y,type){
-        /*this.nextTurnButton.updateMouse(x-this.x,y-this.y);
+    updateMouse(x,y){
+        if(x>=this.x && x<=this.x+this.w &&
+           y>=this.y && y<=this.y+this.h)
 
-        if(type=="mousedown" || type=="touchstart")
-            this.nextTurnButton.onClickDown();
-        if(type=="mouseup" || type=="touchend")
-            this.nextTurnButton.onClickUp();*/
+            this.mouseover=true;
+        else{
+            this.mouseover=false;
+            this.clicked=false;
+        }
+        this.mousex = x - this.x;
     }
+
 }
 
 function recipeList(){

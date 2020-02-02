@@ -15,6 +15,7 @@ class ProductionDialog extends Dialog{
             this.ingredientViewers.push(
                 new IngredientViewer(25,143+i*37,3-i));
             this.children.push(this.ingredientViewers[i]);
+            this.buttons.push(this.ingredientViewers[i]);
         }
 
         this.ingredientInfoBox=new InfoBox(230,190);
