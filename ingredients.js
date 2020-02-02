@@ -47,68 +47,44 @@ var ingredientImgNames = [
 ];
 
 var ingredientCosts = [
-    1,
-    10,
-    10,
-    15,
-    15,
-    100,
-    25,
-    1000,
-    5,
-    1000000,
-    100,
-    1000
-];
-
-var ingredientBaseQtys = [
-    10000,
-    10000,
-    10000,
-    10000,
-    10000,
-    1000,
-    10,
-    1,
-    100,
-    1,
-    100,
-    10
-];
-
-var ingredientBasePeaks = [
-    200000,
-    200000,
-    200000,
-    200000,
-    200000,
-    200000,
-    1500,
     100,
     300,
+    300,
+    500,
+    400,
     1000,
-    5000,
-    250
+    1500,
+    4000,
+    8000,
+    10000,
+    10000,
+    15000
 ];
 
-var ingredientBaseTastes = [
-    25,
-    30,
-    30,
-    40,
-    40,
-    55,
-    60,
-    35,
-    80,
-    100,
-    50,
-    75
+var ingredientBaseQtys = [];
+
+var ingredientBasePeaks = [
+    3,
+    2,
+    2,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    3,
+    5
 ];
+
+var ingredientBaseTastes = [];
 
 for(var i=0;i<12;i++){
-    ingredientBasePeaks[i] = ingredientBasePeaks[i] * (Math.random()*.5+.75);
-    ingredientBaseTastes[i] = ingredientBaseTastes[i] * (Math.random()*.5+.75);
+    ingredientBaseQtys[i] = 100;
+    ingredientBasePeaks[i] += Math.random()*11;
+    ingredientBasePeaks[i] *= 100;
+    ingredientBaseTastes[i] = ingredientCosts[i] * (Math.random()*.5+.75) * (i+10);
 }
 
 function ingredientImgName(name){
