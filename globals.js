@@ -5,6 +5,8 @@ var screenScale;
 var imgNames=[
     "dialog_background",
     "dialog_title_background",
+    "recipe_buns",
+    "ingredient_viewer_background",
     "info_box_background",
     "factory_background",
     "factory_foreground",
