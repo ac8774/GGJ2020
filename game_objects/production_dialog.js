@@ -2,26 +2,6 @@ class ProductionDialog extends Dialog{
     constructor(){
         super("PRODUCTION");
 
-        this.purchaseButton=new TextButton(
-            "BUY FOR $"+
-                ingredientCost(
-                    ingredientNames.indexOf(activeIngredient))*1000,
-            20,
-            340,
-            function(){
-            
-            var ingredientIndex=
-                ingredientNames.indexOf(activeIngredient);
-            
-            if(money>=ingredientCost(activeIngredient)*1000){
-                money-=ingredientCost(activeIngredient)*1000;
-                ingredientsUnlocked[ingredientIndex];
-            }
-        });
-
-        this.children.push(this.btnDone);
-        this.buttons.push(this.btnDone);*/
-
         this.ingredientViewers=[];
         for(i=0;i<12;++i){
             this.ingredientViewers.push(
@@ -32,6 +12,25 @@ class ProductionDialog extends Dialog{
 
         this.ingredientInfoBox=new InfoBox(230,190);
         this.children.push(this.ingredientInfoBox);
+        
+        this.purchaseButton=new TextButton(
+            "$"+
+                ingredientCost(
+                    ingredientNames.indexOf(activeIngredient))*1000,
+            240,
+            218,
+            function(){
+            
+            var ingredientIndex=
+                ingredientNames.indexOf(activeIngredient);
+            
+            if(money>=ingredientCost(activeIngredient)*1000){
+                money-=ingredientCost(activeIngredient)*1000;
+                ingredientsUnlocked[ingredientIndex];
+            }
+        },true);
+        this.children.push(this.purchaseButton);
+        this.buttons.push(this.purchaseButton);
 
         this.minusButton = new IconButton('ic/minus',240,275,function(){
             if(activeIngredient in recipe){
