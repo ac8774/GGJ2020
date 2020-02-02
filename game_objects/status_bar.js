@@ -10,7 +10,7 @@ class StatusBar{
                                            584,
                                            8,
                                            function(){sb.setEnabled(false); endTurn();});
-        
+
         //Enable status bar
         this.enabled=true;
     }
@@ -23,16 +23,17 @@ class StatusBar{
 
         ctx.save();
         ctx.translate(this.x,this.y);
-
+        ctx.textAlign = "left";
+        ctx.font = "24px Arial Black";
+        ctx.fillStyle = "#FFFFFF";
+        ctx.fillText("$"+money.toLocaleString('en'),25,40)
+        ctx.textAlign = "end";
         if(this.enabled){
-            ctx.textAlign = "end";
-            ctx.font = "24px Arial Black";
-            ctx.fillStyle = "#FFFFFF";
             ctx.fillText("NEXT TURN",
                          574,
                          40);
         }
-        
+
         this.nextTurnButton.render();
 
         ctx.restore();
@@ -46,7 +47,7 @@ class StatusBar{
         if(type=="mouseup" || type=="touchend")
             this.nextTurnButton.onClickUp();
     }
-    
+
     setEnabled(enabled){
         this.enabled=enabled;
         this.nextTurnButton.setEnabled(enabled);

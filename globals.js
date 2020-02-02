@@ -61,6 +61,10 @@ var sb;  //Status bar
 var recipe = {};
 var activeIngredient;
 
+var money;
+var week;
+var lastWeekTaste;
+
 var burgertimer = 60;
 var camera = {
   x: 0,

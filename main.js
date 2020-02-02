@@ -35,6 +35,8 @@ function start(){
     sb  = new StatusBar();
     camx = 1280;
     camxgoal = 1280;
+    money = 1000000;
+    week = 0;
     window.requestAnimationFrame(gameLoop);
 }
 

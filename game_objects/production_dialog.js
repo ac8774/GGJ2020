@@ -20,12 +20,12 @@ class ProductionDialog extends Dialog{
 
         this.ingredientInfoBox=new InfoBox(230,190);
         this.children.push(this.ingredientInfoBox);
-        
+
         this.minusButton = new IconButton('ic/minus',240,275,function(){
             if(activeIngredient in recipe){
                 recipe[activeIngredient]-=
                     ingredientBaseQty(activeIngredient);
-                
+
                 if(recipe[activeIngredient]==0)
                     delete recipe[activeIngredient];
             } else {
@@ -34,7 +34,7 @@ class ProductionDialog extends Dialog{
         });
         this.children.push(this.minusButton);
         this.buttons.push(this.minusButton);
-        
+
         this.plusButton = new IconButton('ic/plus',495,275,function(){
             if(activeIngredient in recipe){
                 recipe[activeIngredient]+=
@@ -89,7 +89,7 @@ class ProductionDialog extends Dialog{
             this.minusButton.setEnabled(true);
             this.plusButton.setEnabled(true);
         }
-        
+
         super.render();
 
         ctx.save();
@@ -97,6 +97,10 @@ class ProductionDialog extends Dialog{
 
         drawImage("recipe_bun_bottom",25,291,1);
         drawImage("recipe_bun_top",25,76+37*(4-recipeList().length),1);
+        ctx.textAlign = "left";
+        ctx.font = "20px Arial Black";
+        ctx.fillStyle = "#555555";
+        ctx.fillText("$"+totalCost().toLocaleString('en'),37,315)
 
         ctx.restore();
     }
