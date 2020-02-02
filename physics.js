@@ -87,7 +87,7 @@ function resetWorld() {
   newEdge(-9, -1, 12, -5);
   newEdge(-9, -1, -8, 3)
   newEdge(-8, 3, -6.5, 4);
-  newEdge(12, 1, 12, 30);
+  newEdge(8.8, 1, 8.8, 30);
 
 }
 
