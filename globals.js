@@ -39,6 +39,9 @@ var sounds;
 var dlg; //Current dialog
 var sb;  //Status bar
 
+var recipe = {}
+var activeIngredient;
+
 var burgertimer = 60;
 var camera = {
   x: 0,

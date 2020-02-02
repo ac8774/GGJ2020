@@ -8,6 +8,7 @@ class InfoBox{
         this.image=image;
         this.title=title;
         this.flavorText=flavorText;
+        activeIngredient = title;
     }
 
     render(){
@@ -25,6 +26,12 @@ class InfoBox{
             ctx.fillText(this.title,
                          78,
                          25);
+            //
+            if(this.title in recipe){
+                ctx.fillText(recipe[this.title]+" units",125,115)
+            }else{
+                ctx.fillText("None in recipe",125,115)
+            }
 
             ctx.font="12px Arial";
             var flavors = this.flavorText.split("\n");
@@ -35,10 +42,7 @@ class InfoBox{
             ctx.fillText(flavors[1],
                          78,
                          63);
-            if(flavors[2])
-            ctx.fillText(flavors[2],
-                         78,
-                         81);
+
 
         }
 
