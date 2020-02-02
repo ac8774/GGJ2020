@@ -35,6 +35,7 @@ var sounds;
 
 //Global ingame objects
 var dlg; //Current dialog
+var sb;  //Status bar
 
 var burgertimer = 60;
 var camera = {

@@ -9,7 +9,7 @@ var ingredientNames = [
     "Growth Hormones",
     "Gravel",
     "Assorted Drugs",
-    "tbd",
+    '"The Meats"',
     '"Secret Sauce"'
 ];
 var ingredientFlavorTexts = [
@@ -23,7 +23,7 @@ var ingredientFlavorTexts = [
     "placeholder",
     "placeholder",
     "placeholder",
-    "placeholder",
+    "We have 'em.",
     "placeholder"
 ];
 var ingredientImgNames = [

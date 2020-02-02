@@ -3,6 +3,7 @@ function renderAll(){
     clearScreen();
     renderBackground();
     if(dlg) dlg.render();
+    sb.render();
 }
 
 

@@ -22,6 +22,7 @@ function init(){
 
 function start(){
     dlg = new ProductionDialog();
+    sb  = new StatusBar();
     camx = 0;
     camxgoal = 0;
     window.requestAnimationFrame(gameLoop);
