@@ -46,6 +46,8 @@ var ingredientImgNames = [
     "ic/secret_sauce"
 ];
 
+var ingredientsUnlocked = [];
+
 var ingredientCosts = [
     100,
     300,
@@ -81,14 +83,21 @@ var ingredientBasePeaks = [
 var ingredientBaseTastes = [];
 
 for(var i=0;i<12;i++){
-    ingredientBaseQtys[i] = 100;
-    ingredientBasePeaks[i] += Math.random()*11;
-    ingredientBasePeaks[i] *= 100;
-    ingredientBaseTastes[i] = ingredientCosts[i] * (Math.random()*.5+.75) * (i+10);
+    ingredientBaseQtys[i]    = 100;
+    ingredientBasePeaks[i]  += Math.random()*11;
+    ingredientBasePeaks[i]  *= 100;
+    ingredientBaseTastes[i]  = ingredientCosts[i]*
+                               (Math.random()*.5+.75)*
+                               (i+10);
+    ingredientsUnlocked[i]    = i<4;
 }
 
 function ingredientImgName(name){
     return ingredientImgNames[ingredientNames.indexOf(name)];
+}
+
+function ingredientUnlocked(name){
+    return ingredientsUnlocked[ingredientNames.indexOf(name)];
 }
 
 function ingredientCost(name){

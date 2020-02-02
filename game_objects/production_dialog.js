@@ -2,10 +2,22 @@ class ProductionDialog extends Dialog{
     constructor(){
         super("PRODUCTION");
 
-    /*    this.btnDone=new TextButton("DONE",
-                                    20,
-                                    340,
-                                    function(){dlg = undefined;});
+        this.purchaseButton=new TextButton(
+            "BUY FOR $"+
+                ingredientCost(
+                    ingredientNames.indexOf(activeIngredient))*1000,
+            20,
+            340,
+            function(){
+            
+            var ingredientIndex=
+                ingredientNames.indexOf(activeIngredient);
+            
+            if(money>=ingredientCost(activeIngredient)*1000){
+                money-=ingredientCost(activeIngredient)*1000;
+                ingredientsUnlocked[ingredientIndex];
+            }
+        });
 
         this.children.push(this.btnDone);
         this.buttons.push(this.btnDone);*/
@@ -75,8 +87,11 @@ class ProductionDialog extends Dialog{
     }
 
     render(){
-        if(!(activeIngredient in recipe) && recipeList().length==maxIngredients ||
-           typeof activeIngredient=="undefined"){
+        if(!(activeIngredient in recipe) &&
+           recipeList().length==maxIngredients ||
+           typeof activeIngredient=="undefined" ||
+           !ingredientUnlocked(activeIngredient)){
+            
             this.minusButton.setEnabled(false);
             this.plusButton.setEnabled(false);
         }else if(!(activeIngredient in recipe)){
@@ -100,7 +115,7 @@ class ProductionDialog extends Dialog{
         ctx.textAlign = "left";
         ctx.font = "20px Arial Black";
         ctx.fillStyle = "#555555";
-        ctx.fillText("$"+totalCost().toLocaleString('en'),37,315)
+        ctx.fillText("$"+totalCost().toLocaleString('en'),37,315);
 
         ctx.restore();
     }

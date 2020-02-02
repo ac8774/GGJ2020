@@ -8,19 +8,21 @@ class TextButton extends Button{
         
         //Wide button boolean
         this.wide=wide;
-
-        //Coordinates of top-left corner
-        this.w = sprites["text_button"].width;
-        this.h = sprites["text_button"].height;
         
         //Button image
-        this.background="text_button";
+        this.background=this.wide?"wide_text_button":"text_button";
+
+        //Coordinates of top-left corner
+        this.w = sprites[this.background].width;
+        this.h = sprites[this.background].height;
     }
 
     render(){
         if(this.mouseover && this.clicked){
             this.background=
-                this.wide?"wide_text_button_pressed":"text_button_pressed";
+                this.wide?
+                    "wide_text_button_pressed":
+                    "text_button_pressed";
             this.textOffset=4;
         }else{
             this.background=this.wide?"wide_text_button":"text_button";

@@ -16,6 +16,8 @@ var imgNames=[
     "icon_button_pressed",
     "text_button",
     "text_button_pressed",
+    "wide_text_button",
+    "wide_text_button_pressed",
     "burger",
 
     //Icons
