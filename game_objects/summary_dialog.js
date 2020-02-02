@@ -3,7 +3,7 @@ class SummaryDialog extends Dialog{
         super("SUMMARY");
 
         this.btnDone=new TextButton("DONE",
-                                    20,
+                                    425,
                                     280,
                                     function(){startTurn();});
 
