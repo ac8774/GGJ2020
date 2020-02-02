@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="47.625mm"
+   height="10.583333mm"
+   viewBox="0 0 47.625 10.583333"
+   version="1.1"
+   id="svg2396"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="recipe_bun_bottom.svg">
+  <defs
+     id="defs2390" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="-12.965077"
+     inkscape:cy="-111.1926"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2393">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-94.08269,-67.335867)">
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:1.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 97.757404,67.335867 c -2.03593,0 -3.674714,1.638784 -3.674714,3.674711 v 3.233912 c 0,2.035926 1.638784,3.67471 3.674714,3.67471 h 40.275576 c 2.03592,0 3.67471,-1.638784 3.67471,-3.67471 v -3.233912 c 0,-2.035927 -1.63879,-3.674711 -3.67471,-3.674711 z"
+       id="path849" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#dbaf00;fill-opacity:1;stroke:none;stroke-width:1.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 130.38745,67.335867 c 1.68175,0 3.03547,1.307521 3.03547,2.93212 v 2.580722 c 0,1.6246 -1.35372,2.932121 -3.03547,2.932121 H 97.118164 c -1.68175,0 -3.035474,-1.307521 -3.035474,-2.932121 v 1.395781 c 0,2.035926 1.638784,3.67471 3.674714,3.67471 h 40.275576 c 2.03592,0 3.67471,-1.638784 3.67471,-3.67471 v -3.233912 c 0,-2.035927 -1.63879,-3.674711 -3.67471,-3.674711 z"
+       id="path863" />
+  </g>
+</svg>
