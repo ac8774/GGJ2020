@@ -1,6 +1,7 @@
 var cvs;
 var ctx;
 var screenScale;
+
 var imgNames=[
     "dialog_background",
     "dialog_title_background",
@@ -19,6 +20,7 @@ var imgNames=[
 var sprites;
 var camx;
 var camxgoal;
+
 var audioFiles=[
    "addingTo",
     "click_Click_DOWN",
@@ -29,7 +31,7 @@ var audioFiles=[
     "swipe_Remove",
     "truckDriveAway"
 ];
-
+var sounds;
 
 //Global ingame objects
 var dlg; //Current dialog
@@ -46,6 +48,7 @@ function init(){
     cvs = document.getElementById("gameCanvas");
     ctx = cvs.getContext("2d");
     screenScale = {x:1, y:1};
+    loadAudio(audioFiles);
     loadImages(imgNames); // calls start() after loading
 }
 
