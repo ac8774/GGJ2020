@@ -15,12 +15,12 @@ var ingredientNames = [
 
 var ingredientFlavorTexts = [
     "Garden variety garbage.",
-    "placeholder",
-    "placeholder",
+    "9 out of 10 dentists recommend using\ncompost instead of regular dirt.",
+    "Unsorted and unsanitary!",
     "Comparable nutritional value to the\n"+
         "average school lunch.",
-    "placeholder",
-    "placeholder",
+    "Pre-smashed for your convenience.",
+    "If it's safe enough for dogs,\nit's the safest thing here.",
     "Delicious, nutritrous, and best of all..."+
         "\nSHINY!",
     "Cheap and safe growth hormones!* \n"+
@@ -28,7 +28,7 @@ var ingredientFlavorTexts = [
     "Lovingly decayed in small batches.",
     "Extracted from your local water supply.",
     "We have 'em.",
-    "placeholder"
+    "Don't ask."
 ];
 
 var ingredientImgNames = [

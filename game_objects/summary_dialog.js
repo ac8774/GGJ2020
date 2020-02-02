@@ -36,7 +36,7 @@ class SummaryDialog extends Dialog{
         }else {
             this.msg = "Now THAT'S a burger!"
         }
-        this.msg2 = "";
+        this.msg2 = "I wonder if we could make them better?";
         if(week>1){
         if(ratio>0 && totalTaste()>0){
             if(ratio<0.1){
@@ -59,6 +59,8 @@ class SummaryDialog extends Dialog{
                     this.msg2 = "A tiny bit worse than last week's."
                 else
                     this.msg2 = "Not quite as good as last week's, though."
+            } else if(ratio == 1){
+                this.msg2 = "I wonder if we could make them better?"
             } else if(ratio<1.05){
                 if(t<1000)
                     this.msg2 = "A tiny bit better than last week's, though."
