@@ -21,7 +21,7 @@ var ingredientFlavorTexts = [
     "placeholder",
     "placeholder",
     "placeholder",
-    "Cheap & safe growth hormones!* \n *This statement has not \n  been evaluated by the FDA.",
+    "Cheap & safe growth hormones! \n *This statement has not \n  been evaluated by the FDA.",
     "Lovingly exploded \nin small batches.",
     "placeholder",
     "We have 'em.",
@@ -100,7 +100,7 @@ var ingredientBaseTastes = [
     30,
     100,
     50,
-    75
+    175
 ];
 
 for(var i=0;i<12;i++){
