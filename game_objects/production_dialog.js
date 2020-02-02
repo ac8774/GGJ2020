@@ -13,7 +13,7 @@ class ProductionDialog extends Dialog{
         this.ingredientViewers=[];
         for(i=0;i<4;++i){
             this.ingredientViewers.push(
-                new IngredientViewer(25,143+i*37));
+                new IngredientViewer(25,143+i*37,3-i));
             this.children.push(this.ingredientViewers[i]);
         }
 

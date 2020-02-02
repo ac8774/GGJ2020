@@ -22,6 +22,7 @@ class Dialog{
         if(Math.abs(this.y-this.targety)<1) this.y = this.targety;
         if(this.y<-550){
             dlg = undefined;
+            if(callback)
             this.callback();
         }
         ctx.save();
