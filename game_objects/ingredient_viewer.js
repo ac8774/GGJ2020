@@ -1,11 +1,16 @@
-class IngredientViewer{
+class IngredientViewer extends Button{
     constructor(x,y,i){
-        this.x=x;
-        this.y=y;
+        super(x,y,function(){
+            var r = recipeList();
+            if(this.mousex>130){
+                delete recipe[r[this.i]];
+            }else{
+                activeIngredient = r[this.i];
+            }
+        })
         this.w=180;
         this.h=32;
         this.i = i;
-        this.moused = false;
         this.mousex = 0;
     }
 
@@ -23,22 +28,17 @@ class IngredientViewer{
     }
 
     updateMouse(x,y){
-        this.moused = (x>=this.x && x<=this.x+this.w &&
-           y>=this.y && y<=this.y+this.h);
+        if(x>=this.x && x<=this.x+this.w &&
+           y>=this.y && y<=this.y+this.h)
+
+            this.mouseover=true;
+        else{
+            this.mouseover=false;
+            this.clicked=false;
+        }
         this.mousex = x - this.x;
     }
-    onClickDown(){
-        if(this.moused)
-        {
-            var r = recipeList();
-            if(this.mousex>150){
-                delete recipe[r[this.i]];
-            }else{
-                activeIngredient = r[this.i];
-            }
-        }
-    }
-    onClickUp(){}
+
 }
 
 function recipeList(){
