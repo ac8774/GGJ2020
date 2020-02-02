@@ -1,10 +1,13 @@
 class TextButton extends Button{
-    constructor(text,x,y,callback){
+    constructor(text,x,y,callback,wide=false){
         super(x,y,callback);
         
         //Button text
         this.text=text;
         this.textOffset=0;
+        
+        //Wide button boolean
+        this.wide=wide;
 
         //Coordinates of top-left corner
         this.w = sprites["text_button"].width;
@@ -16,10 +19,11 @@ class TextButton extends Button{
 
     render(){
         if(this.mouseover && this.clicked){
-            this.background="text_button_pressed";
+            this.background=
+                this.wide?"wide_text_button_pressed":"text_button_pressed";
             this.textOffset=4;
         }else{
-            this.background="text_button";
+            this.background=this.wide?"wide_text_button":"text_button";
             this.textOffset=0;
         }
         
