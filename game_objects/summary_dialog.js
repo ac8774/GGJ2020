@@ -14,7 +14,6 @@ class SummaryDialog extends Dialog{
         var ratio = totalTaste()/lastWeekTaste;
         lastWeekTaste = totalTaste();
 
-        money -= totalCost();
         money += this.income;
         week ++;
 

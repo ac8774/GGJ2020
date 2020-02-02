@@ -9,7 +9,7 @@ class StatusBar{
         this.nextTurnButton=new IconButton("ic/next_turn",
                                            584,
                                            8,
-                                           function(){sb.setEnabled(false); endTurn();});
+                                           function(){if(totalCost()<=money && totalCost() > 0){money-=totalCost();sb.setEnabled(false); endTurn();}});
 
         //Enable status bar
         this.enabled=true;
@@ -28,12 +28,12 @@ class StatusBar{
         ctx.fillStyle = "#FFFFFF";
         ctx.fillText("$"+money.toLocaleString('en'),25,40)
         ctx.textAlign = "end";
-        if(this.enabled){
+        if(this.enabled && totalCost()<=money && totalCost() > 0){
             ctx.fillText("NEXT TURN",
                          574,
                          40);
         }
-
+if(totalCost()<=money && totalCost() > 0)
         this.nextTurnButton.render();
 
         ctx.restore();
