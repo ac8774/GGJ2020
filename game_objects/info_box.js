@@ -55,8 +55,11 @@ class InfoBox{
                    typeof activeIngredient=="undefined")
 
                     ctx.fillText("RECIPE FULL",162,115);
-                else
-                    ctx.fillText("ADD TO RECIPE",162,115);
+                else{
+                    ctx.fillText("ADD TO RECIPE",162,110);
+                    ctx.font="16px Arial";
+                    ctx.fillText("$"+(100*ingredientCost(activeIngredient)).toLocaleString('en'),162,130);
+                }
 
             }
         }
