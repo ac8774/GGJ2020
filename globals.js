@@ -19,6 +19,7 @@ var imgNames=[
     //Icons
     "ic/next_turn",
     "ic/generic_garbage",
+    "ic/compost",
     "ic/mixed_recycling",
     "ic/placeholder"
 ];
