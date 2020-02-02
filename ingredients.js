@@ -2,16 +2,17 @@ var ingredientNames = [
     "Generic garbage",
     "Compost",
     "Mixed recycling",
-    "Plastic recycling",
+    "Gravel",
     "Glass shards",
     "Whole cows",
     "Glitter",
     "Growth hormones",
-    "Gravel",
-    "Assorted drugs",
+    "Radioactive waste",
+    "Assorted narcotics",
     '"The Meats"',
     '"Secret Sauce"'
 ];
+
 var ingredientFlavorTexts = [
     "Garden variety garbage.",
     "placeholder",
@@ -21,11 +22,12 @@ var ingredientFlavorTexts = [
     "placeholder",
     "placeholder",
     "Cheap & safe growth hormones!* \n*This statement has not \nbeen evaluated by the FDA.",
-    "placeholder",
+    "Lovingly exploded in small batches.",
     "placeholder",
     "We have 'em.",
     "placeholder"
 ];
+
 var ingredientImgNames = [
     "ic/generic_garbage",
     "ic/placeholder",
@@ -40,6 +42,7 @@ var ingredientImgNames = [
     "ic/placeholder",
     "ic/placeholder"
 ];
+
 var ingredientCosts = [
     1,
     10,
@@ -54,6 +57,7 @@ var ingredientCosts = [
     100,
     1000
 ];
+
 var ingredientBaseQtys = [
     10000,
     10000,
@@ -68,6 +72,7 @@ var ingredientBaseQtys = [
     100,
     10
 ];
+
 var ingredientBasePeaks = [
     20000,
     20000,
@@ -81,7 +86,8 @@ var ingredientBasePeaks = [
     100,
     500,
     25
-]
+];
+
 var ingredientBaseTastes = [
     25,
     30,
@@ -105,15 +111,19 @@ for(var i=0;i<12;i++){
 function ingredientImgName(name){
     return ingredientImgNames[ingredientNames.indexOf(name)];
 }
+
 function ingredientCost(name){
     return ingredientCosts[ingredientNames.indexOf(name)];
 }
+
 function ingredientBaseQty(name){
     return ingredientBaseQtys[ingredientNames.indexOf(name)];
 }
+
 function ingredientPeakQty(name){
     return ingredientBasePeaks[ingredientNames.indexOf(name)];
 }
+
 function ingredientPeakTaste(name){
     return ingredientBaseTastes[ingredientNames.indexOf(name)];
 }
@@ -121,6 +131,7 @@ function ingredientPeakTaste(name){
 function costOf(name, amount){
     return ingredientCost(name) * amount
 }
+
 function tastinessOf(name, amount){
     peak = ingredientPeakQty(name);
     return ingredientPeakTaste(name) * (1 - Math.abs(peak - amount) / peak)
