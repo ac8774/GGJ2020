@@ -14,11 +14,9 @@ class ProductionDialog extends Dialog{
         this.children.push(this.ingredientInfoBox);
         
         this.purchaseButton=new TextButton(
-            "$"+
-                ingredientCost(
-                    ingredientNames.indexOf(activeIngredient))*1000,
-            240,
-            218,
+            "",
+            263,
+            275,
             function(){
             
             var ingredientIndex=
@@ -26,7 +24,7 @@ class ProductionDialog extends Dialog{
             
             if(money>=ingredientCost(activeIngredient)*1000){
                 money-=ingredientCost(activeIngredient)*1000;
-                ingredientsUnlocked[ingredientIndex];
+                ingredientsUnlocked[ingredientIndex]=true;
             }
         },true);
         this.children.push(this.purchaseButton);
@@ -103,6 +101,15 @@ class ProductionDialog extends Dialog{
             this.minusButton.setEnabled(true);
             this.plusButton.setEnabled(true);
         }
+        
+        if(typeof activeIngredient!="undefined" &&
+            !ingredientUnlocked(activeIngredient)){
+            
+            this.purchaseButton.setText(
+                "$"+(ingredientCost(activeIngredient)*1000).toLocaleString('en'));
+            this.purchaseButton.setEnabled(true);
+        }else
+            this.purchaseButton.setEnabled(false);
 
         super.render();
 

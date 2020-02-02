@@ -18,23 +18,29 @@ class TextButton extends Button{
     }
 
     render(){
-        if(this.mouseover && this.clicked){
-            this.background=
-                this.wide?
-                    "wide_text_button_pressed":
-                    "text_button_pressed";
-            this.textOffset=4;
-        }else{
-            this.background=this.wide?"wide_text_button":"text_button";
-            this.textOffset=0;
+        if(this.enabled){
+            if(this.mouseover && this.clicked){
+                this.background=
+                    this.wide?
+                        "wide_text_button_pressed":
+                        "text_button_pressed";
+                this.textOffset=4;
+            }else{
+                this.background=this.wide?"wide_text_button":"text_button";
+                this.textOffset=0;
+            }
+            
+            drawImage(this.background,this.x,this.y,1);
+            ctx.textAlign = "center";
+            ctx.font = "26px Arial Black";
+            ctx.fillStyle = "#777777";
+            ctx.fillText(this.text,
+                         this.x+this.textOffset+this.w/2,
+                         this.y+this.textOffset+this.h/2+8);
         }
-        
-        drawImage(this.background,this.x,this.y,1);
-        ctx.textAlign = "center";
-        ctx.font = "26px Arial Black";
-        ctx.fillStyle = "#999999";
-        ctx.fillText(this.text,
-                     this.x+this.textOffset+this.w/2,
-                     this.y+this.textOffset+this.h/2+8);
+    }
+    
+    setText(text){
+        this.text=text;
     }
 }
