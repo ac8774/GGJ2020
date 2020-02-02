@@ -19,6 +19,17 @@ var imgNames=[
 var sprites;
 var camx;
 var camxgoal;
+var audioFiles=[
+   "addingTo",
+    "click_Click_DOWN",
+    "click_Click_UP",
+    "Crunch",
+    "factorySound",
+    "bell",
+    "swipe_Remove",
+    "truckDriveAway"
+];
+
 
 //Global ingame objects
 var dlg; //Current dialog
@@ -57,3 +68,14 @@ function loadImages(names) {
         sprites[name].src = "img/" + name + ".svg";
     }
 }
+
+function loadAudio(names) {
+    var count  = names.length;
+    sounds = {};
+    for(var n = 0 ; n < names.length ; n++) {
+        var name = names[n];
+        sounds[name] = new Audio();
+        sounds[name].src = "Sounds/" + name + ".wav";
+    }
+}
+
