@@ -33,7 +33,7 @@ var ingredientFlavorTexts = [
 
 var ingredientImgNames = [
     "ic/generic_garbage",
-    "ic/placeholder",
+    "ic/compost",
     "ic/mixed_recycling",
     "ic/placeholder",
     "ic/placeholder",
