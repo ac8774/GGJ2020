@@ -21,8 +21,8 @@ class Button{
     
     onClickDown(){
         if(this.mouseover){
-            this.clicked=true;
             sounds["click_down"].play();
+            this.clicked=true;
         }
     }
 
@@ -31,6 +31,7 @@ class Button{
             if(this.clicked)
                 this.callback();
             
+            sounds["click_up"].play();
             this.clicked=false;
         }
     }
