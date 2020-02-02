@@ -2,18 +2,20 @@ class IntroDialog extends Dialog{
     constructor(){
         super("BUDGET BURGERS");
 
-        this.btnDone=new TextButton("START",425,280,function(){startTurn();});
+        this.btnDone=new TextButton("START",295,280,function(){startTurn();},true);
         this.children.push(this.btnDone);
         this.buttons.push(this.btnDone);
 
-        this.creditsBtn=new TextButton("CREDITS",250,232,function(){credits();},true);
+        this.creditsBtn=new TextButton("CREDITS",20,280,function(){credits();},true);
         this.children.push(this.creditsBtn);
         this.buttons.push(this.creditsBtn);
 
         this.message = [
-            "first line",
-            "second line",
-            "third line"
+            "You are the CEO and head cook of Budget Burgers.",
+            "Your beef supplier has been shut down by the CDC.",
+            "Luckily, your contacts in public sanitation have provided",
+            "you with local-grown, freshly salvaged ingredients.",
+            "Use the mouse to create the perfect burger!"
         ];
     }
 
@@ -30,10 +32,10 @@ class IntroDialog extends Dialog{
             ctx.fillText(m,290,y)
             y += 30;
         });
-        ctx.textAlign = "left";
+        ctx.textAlign = "center";
         ctx.font="14px Arial";
         ctx.fillStyle="#aaaaaa";
-        ctx.fillText("Press F for fullscreen", 25, 325);
+        ctx.fillText("Press F for fullscreen", 290, 250);
 
 
         ctx.restore();
