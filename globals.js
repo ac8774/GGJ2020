@@ -7,6 +7,7 @@ var imgNames=[
     "dialog_title_background",
     "info_box_background",
     "factory_background",
+    "factory_foreground",
     "icon_button",
     "icon_button_pressed",
     "text_button",

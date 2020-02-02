@@ -1,7 +1,7 @@
 function doPhysics() {
     world.Step(1 / 60, 8, 3);
 
-    camera.x = 1.5*640;
+    camera.x = 2.5*640;
     camera.y = 240;
     camera.s = 24;
 
@@ -29,6 +29,11 @@ function doPhysics() {
             }
         }
         ctx.restore();
+        if(b.GetTransform().p.x>14.5 || b.GetTransform().p.y<-12)
+        {
+            world.DestroyBody(b);
+            i--;
+        }
     }
     ctx.restore();
 }
