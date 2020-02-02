@@ -18,7 +18,7 @@ function renderBackground(){
     drawImage("factory_background",0,0,1);
     burgertimer = (burgertimer+1)%60;
     if(burgertimer==0){
-        newCircle(1,0,0);
+        newBurger();
     }
     doPhysics();
     ctx.restore();

@@ -1,7 +1,7 @@
 function doPhysics() {
     world.Step(1 / 60, 8, 3);
 
-    camera.x = 320;
+    camera.x = 1.5*640;
     camera.y = 240;
     camera.s = 24;
 
@@ -79,10 +79,7 @@ function resetWorld() {
   var bd = new b2BodyDef;
   g_groundBody = world.CreateBody(bd);
 
-  newEdge(-10, -10, 10, -10);
-  newEdge(-10, -10, -10, 10);
-  newEdge(10, -10, 10, 10);
-  newEdge(-10, 10, 10, 10);
+  newEdge(-12, -1, 12, -5);
 }
 
 function newEdge(x1, y1, x2, y2) {
@@ -93,14 +90,16 @@ function newEdge(x1, y1, x2, y2) {
   body.CreateFixtureFromShape(edge);
 }
 
-function newCircle(r = 1, x = 0, y = 1, density = 1) {
+function newBurger() {
   var circle = new b2CircleShape();
-  circle.radius = r;
+  circle.radius = 1;
   var bd = new b2BodyDef();
   bd.type = b2_dynamicBody;
-  bd.position.Set(x, y);
+  bd.position.Set(-10, 3);
   var body = world.CreateBody(bd);
-  body.CreateFixtureFromShape(circle, density);
+  body.CreateFixtureFromShape(circle, 1);
+  body.SetLinearVelocity(new b2Vec2(3+3*Math.random(),7+6*Math.random()))
+  body.SetAngularVelocity(20*Math.random()-10)
 }
 
 function newSquare(r = 1, x = 0, y = 1, density = 1) {
