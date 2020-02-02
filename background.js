@@ -12,5 +12,6 @@ function renderBackground(){
         burgertimer = Math.floor(60+20*Math.random());
     }
     doPhysics();
+    drawImage("factory_foreground",0,0,1);
     ctx.restore();
 }
