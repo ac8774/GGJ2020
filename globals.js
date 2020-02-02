@@ -30,6 +30,8 @@ var imgNames=[
     "ic/growth_hormones",
     "ic/radioactive_waste",
     "ic/assorted_narcotics",
+    "ic/the_meats",
+    "ic/secret_sauce",
     "ic/placeholder"
 ];
 var sprites;

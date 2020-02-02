@@ -42,8 +42,8 @@ var ingredientImgNames = [
     "ic/growth_hormones",
     "ic/radioactive_waste",
     "ic/assorted_narcotics",
-    "ic/placeholder",
-    "ic/placeholder"
+    "ic/the_meats",
+    "ic/secret_sauce"
 ];
 
 var ingredientCosts = [
