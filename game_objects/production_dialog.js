@@ -57,7 +57,8 @@ class ProductionDialog extends Dialog{
         ctx.save();
         ctx.translate(this.x,this.y);
 
-        drawImage("recipe_buns",25,76,1);
+        drawImage("recipe_bun_bottom",25,291,1);
+        drawImage("recipe_bun_top",25,76+37*(4-recipeList().length),1);
 
         ctx.restore();
     }
