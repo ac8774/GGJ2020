@@ -2,7 +2,7 @@ function initPhysics(){
     setupWorld();
 }
 
-var burgertimer = 0;
+var burgertimer = 60;
 var camera = {
   x: 0,
   y: 0,
@@ -16,9 +16,10 @@ function renderBackground(){
     ctx.save();
     ctx.translate(-camx, 0);
     drawImage("factory_background",0,0,1);
-    burgertimer = (burgertimer+1)%60;
+    burgertimer--;
     if(burgertimer==0){
-        newCircle(1,0,0);
+        newBurger();
+        burgertimer = Math.floor(60+20*Math.random());
     }
     doPhysics();
     ctx.restore();

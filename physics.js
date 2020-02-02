@@ -1,7 +1,7 @@
 function doPhysics() {
     world.Step(1 / 60, 8, 3);
 
-    camera.x = 320;
+    camera.x = 1.5*640;
     camera.y = 240;
     camera.s = 24;
 
@@ -45,7 +45,7 @@ function setupWorld() {
 
   b2CircleShape.prototype.render = function() {
 
-    ctx.drawImage(sprites["burger"],-1,-1,2,2);
+    ctx.drawImage(sprites["burger"],-this.radius,-this.radius,2*this.radius,2*this.radius);
   };
 
   b2PolygonShape.prototype.render = function() {
@@ -79,10 +79,11 @@ function resetWorld() {
   var bd = new b2BodyDef;
   g_groundBody = world.CreateBody(bd);
 
-  newEdge(-10, -10, 10, -10);
-  newEdge(-10, -10, -10, 10);
-  newEdge(10, -10, 10, 10);
-  newEdge(-10, 10, 10, 10);
+  newEdge(-9, -1, 12, -5);
+  newEdge(-9, -1, -8, 3)
+  newEdge(-8, 3, -6.5, 4);
+  newEdge(12, 1, 12, 3);
+
 }
 
 function newEdge(x1, y1, x2, y2) {
@@ -93,14 +94,20 @@ function newEdge(x1, y1, x2, y2) {
   body.CreateFixtureFromShape(edge);
 }
 
-function newCircle(r = 1, x = 0, y = 1, density = 1) {
+function newBurger() {
   var circle = new b2CircleShape();
-  circle.radius = r;
+  circle.radius = 1+Math.random()*.2;
   var bd = new b2BodyDef();
   bd.type = b2_dynamicBody;
-  bd.position.Set(x, y);
+  bd.position.Set(-11, 2);
+  if(Math.random()>0.97){
+      circle.radius *= 2;
+      bd.position.Set(-12,2);
+  }
   var body = world.CreateBody(bd);
-  body.CreateFixtureFromShape(circle, density);
+  body.CreateFixtureFromShape(circle, 1);
+  body.SetLinearVelocity(new b2Vec2(4+2*Math.random(),11+3*Math.random()))
+  body.SetAngularVelocity(20*Math.random()-10)
 }
 
 function newSquare(r = 1, x = 0, y = 1, density = 1) {
