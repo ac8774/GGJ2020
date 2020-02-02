@@ -15,10 +15,10 @@ var ingredientNames = [
 
 var ingredientFlavorTexts = [
     "Garden variety garbage.",
+    "placeholder",
+    "placeholder",
     "Comparable nutritional value to your\n"+
         "kid's school lunch.",
-    "placeholder",
-    "placeholder",
     "placeholder",
     "placeholder",
     "Delicious, nutritrous, and best of all..."+
