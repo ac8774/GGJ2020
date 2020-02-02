@@ -67,7 +67,11 @@ plusfunc = function(){
     if(activeIngredient in recipe){
         recipe[activeIngredient] += ingredientBaseQty(activeIngredient);
     } else {
-        recipe[activeIngredient] = ingredientBaseQty(activeIngredient);
+        if(recipeList().length<4){
+            recipe[activeIngredient] = ingredientBaseQty(activeIngredient);
+        }else {
+            // BAD sound
+        }
     }
 }
 minusfunc = function(){
@@ -76,6 +80,6 @@ minusfunc = function(){
         if(recipe[activeIngredient]==0)
             delete recipe[activeIngredient];
     } else {
-        // BAD
+        // BAD sound
     }
 }

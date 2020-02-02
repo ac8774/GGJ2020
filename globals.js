@@ -6,6 +6,8 @@ var imgNames=[
     "dialog_background",
     "dialog_title_background",
     "recipe_buns",
+    "recipe_bun_top",
+    "recipe_bun_bottom",
     "ingredient_viewer_background",
     "info_box_background",
     "factory_background",
