@@ -2,16 +2,6 @@ function initPhysics(){
     setupWorld();
 }
 
-var burgertimer = 60;
-var camera = {
-  x: 0,
-  y: 0,
-  s: 1
-};
-var world = null;
-var g_groundBody;
-initPhysics() // put in main
-
 function renderBackground(){
     ctx.save();
     ctx.translate(-camx, 0);

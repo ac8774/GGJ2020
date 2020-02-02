@@ -1,42 +1,3 @@
-var cvs;
-var ctx;
-var screenScale;
-
-var imgNames=[
-    "dialog_background",
-    "dialog_title_background",
-    "info_box_background",
-    "factory_background",
-    "icon_button",
-    "icon_button_pressed",
-    "text_button",
-    "text_button_pressed",
-    "burger",
-
-    //Icons
-    "ic/generic_garbage",
-    "ic/placeholder"
-];
-var sprites;
-var camx;
-var camxgoal;
-
-var audioFiles=[
-   "addingTo",
-    "click_Click_DOWN",
-    "click_Click_UP",
-    "Crunch",
-    "factorySound",
-    "bell",
-    "swipe_Remove",
-    "truckDriveAway"
-];
-var sounds;
-
-//Global ingame objects
-var dlg; //Current dialog
-
-init();
 
 function gameLoop() {
     renderAll();
@@ -47,7 +8,14 @@ function gameLoop() {
 function init(){
     cvs = document.getElementById("gameCanvas");
     ctx = cvs.getContext("2d");
+    cvs.addEventListener('mousedown', handleMouseEvent);
+    cvs.addEventListener('touchstart', handleMouseEvent);
+    cvs.addEventListener('mousemove', handleMouseEvent);
+    cvs.addEventListener('mouseup', handleMouseEvent);
+    cvs.addEventListener('touchend', handleMouseEvent);
+    document.addEventListener("keydown",handleKeyEvent);
     screenScale = {x:1, y:1};
+    initPhysics()
     loadAudio(audioFiles);
     loadImages(imgNames); // calls start() after loading
 }
@@ -81,4 +49,3 @@ function loadAudio(names) {
         sounds[name].src = "Sounds/" + name + ".wav";
     }
 }
-
