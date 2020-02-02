@@ -131,6 +131,10 @@ function ingredientPeakTaste(name){
     return ingredientBaseTastes[ingredientNames.indexOf(name)];
 }
 
+function ingredientFlavorText(name){
+    return ingredientFlavorTexts[ingredientNames.indexOf(name)];
+}
+
 function costOf(name, amount){
     return ingredientCost(name) * amount
 }

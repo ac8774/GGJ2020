@@ -15,8 +15,10 @@ class InfoBox{
         ctx.save();
         ctx.translate(this.x, this.y);
         drawImage("info_box_background",0,0,1);
-
+        this.image=ingredientImgName(activeIngredient);
         if(typeof this.image != "undefined"){
+            this.title=activeIngredient;
+            this.flavorText=ingredientFlavorText(activeIngredient);
             drawImage(this.image,12,12,1.7);
 
             ctx.textAlign="start";
