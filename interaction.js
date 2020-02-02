@@ -25,10 +25,12 @@ function handleKeyEvent(e){
         //camxgoal = 640*Math.floor(camx/640-.3);
         camxgoal -= 640
         if(camxgoal < 0) camxgoal = 0;
+        playSound("swipe_Remove");
     }
     if(e.key=="ArrowRight"){
         //camxgoal = 640*Math.ceil(camx/640+.3);
         camxgoal += 640
         if(camxgoal > 640*4) camxgoal = 640*4;
+        playSound("swipe_Remove");
     }
 }
