@@ -13,11 +13,6 @@ class StatusBar{
     }
 
     render(){
-        if(totalCost()<=money && totalCost() > 0)
-            this.setNextTurnEnabled(true);
-        else
-            this.setNextTurnEnabled(false);
-        
         ctx.beginPath();
         ctx.fillStyle="black";
         ctx.rect(this.x,this.y,this.w,this.h);
@@ -33,13 +28,15 @@ class StatusBar{
             ctx.fillText("$"+money.toLocaleString('en'),25,40);
         
         ctx.textAlign = "end";
-        if(this.nextTurnEnabled){
+        if(this.nextTurnEnabled &&
+            totalCost()<=money && totalCost() > 0){
+            
             ctx.fillText("NEXT TURN",
                          574,
                          40);
+            
+            this.nextTurnButton.render();
         }
-        
-        this.nextTurnButton.render();
 
         ctx.restore();
     }

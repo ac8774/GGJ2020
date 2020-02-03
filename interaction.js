@@ -57,8 +57,8 @@ function gotoPage(n, callback){
 
 
 function endTurn(){
-    playSound("bell");
     sb.setNextTurnEnabled(false);
+    playSound("bell");
     dlg.destroy(function(){
         gotoPage(5,function(){
             playSound("truck_drive_away");
